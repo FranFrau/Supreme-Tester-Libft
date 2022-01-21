@@ -30,4 +30,3 @@ pwd
 | alelievr | https://github.com/alelievr/libft-unit-test.git |
 | adrossig | https://github.com/adrossig/libft_tester.git |
 
-## Development
