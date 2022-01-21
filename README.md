@@ -30,3 +30,5 @@ pwd
 | alelievr | https://github.com/alelievr/libft-unit-test.git |
 | adrossig | https://github.com/adrossig/libft_tester.git |
 
+# `WARNING`
+This script use some tester made by students of the 42 network, Be aware and teste by you're own, we never know if the moulinette as been updated. See if and where it fails, understand what the testers tell's you.
