@@ -1,5 +1,8 @@
 # Supreme-Tester-Libft
 
+# `WARNING`
+This script use some tester made by students of the 42 network, Be aware and teste by you're own, we never know if the moulinette as been updated. See if and where it fails, understand what the testers tell's you.
+
 ## Installation
 
 The folder name must necessarily be called "libft"
@@ -10,7 +13,7 @@ vim libft-war-machine/my_config.sh
 then change the name of the 8º row from
 
 ```sh
-PATH_LIBFT="~/libft"
+PATH_LIBFT="../"
 ```
 to
 ```sh
@@ -23,7 +26,7 @@ pwd
 ## Testers
 
 | Author | Link |
-| ------ | ------ |
+| ------ | ---- |
 | y3ll0w42 | https://github.com/y3ll0w42/libft-war-machine |
 | jtoty | https://github.com/jtoty/Libftest.git |
 | Tripouille | https://github.com/Tripouille/libftTester.git |
