@@ -33,5 +33,20 @@ pwd
 | alelievr | https://github.com/alelievr/libft-unit-test.git |
 | adrossig | https://github.com/adrossig/libft_tester.git |
 
+## Usage
+
+You can use the script just with "sh tester.sh" or with the following arguments:
+```sh
+list
+clear
+[1-5]
+```
+like this:
+```sh
+sh tester.sh list
+sh tester.sh clear
+sh tester.sh 3
+```
+
 # `WARNING`
 This script use some tester made by students of the 42 network, Be aware and teste by you're own, we never know if the moulinette as been updated. See if and where it fails, understand what the testers tell's you.
