@@ -7,8 +7,8 @@ This script use some tester made by students of the 42 network, Be aware and tes
 
 The folder name must necessarily be called "libft"
 ```sh
-sh tester.sh
-vim libft-war-machine/my_config.sh
+bash tester.sh
+vim ./libft-war-machine/my_config.sh
 ```
 then change the name of the 8º row from
 
@@ -17,25 +17,30 @@ PATH_LIBFT="../"
 ```
 to
 ```sh
-PATH_LIBFT="Users/{user}/{path}/libft"
+PATH_LIBFT="/Users/{user}/{path}/libft"
+```
+or
+```sh
+PATH_LIBFT="/nfs/homes/{user}/{path}/libft"
 ```
 you can find the right path with
 ```sh
 pwd
 ```
+in your libft folder
 ## Testers
 
-| Author | Link |
-| ------ | ---- |
-| y3ll0w42 | https://github.com/y3ll0w42/libft-war-machine |
-| jtoty | https://github.com/jtoty/Libftest.git |
-| Tripouille | https://github.com/Tripouille/libftTester.git |
-| alelievr | https://github.com/alelievr/libft-unit-test.git |
-| adrossig | https://github.com/adrossig/libft_tester.git |
+| Author | Link | Active |
+| ------ | ---- | - |
+| y3ll0w42 | https://github.com/y3ll0w42/libft-war-machine | ✅ |
+| jtoty | https://github.com/jtoty/Libftest.git | ✅ |
+| Tripouille | https://github.com/Tripouille/libftTester.git | ✅ |
+| alelievr | https://github.com/alelievr/libft-unit-test.git | ❌ |
+| adrossig | https://github.com/adrossig/libft_tester.git | ✅ |
 
 ## Usage
 
-You can use the script just with "sh tester.sh" or with the following arguments:
+You can use the script just with "bash tester.sh" or with the following arguments:
 ```sh
 list
 clear
@@ -43,9 +48,9 @@ clear
 ```
 like this:
 ```sh
-sh tester.sh list
-sh tester.sh clear
-sh tester.sh 3
+bash tester.sh list
+bash tester.sh clear
+bash tester.sh 3
 ```
 
 # `WARNING`

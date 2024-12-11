@@ -1,3 +1,4 @@
+#!/bin/bash
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -6,7 +7,7 @@
 #    By: ffrau <ffrau@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/19 17:16:44 by ffrau             #+#    #+#              #
-#    Updated: 2022/05/22 20:53:58 by ffrau            ###   ########.fr        #
+#    Updated: 2024/12/11 16:28:25 by ffrau            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,15 +27,24 @@ IRED="\033[41m"
 LGREEN="\033[32m"
 NC="\033[0m"
 WARNING="\033[1m\033[4m\033[35m"
-CURR_PATH=$(dirname "$0")
+CURR_PATH=$(dirname "$1")
+
+if [ "$BASH_VERSION" = "" ]; then
+	echo You have to use bash instead of sh
+	exit 0
+fi
 
 if [ -d ${CURR_PATH}/libft-war-machine/ ]; then
-	source ${CURR_PATH}/libft-war-machine/my_config.sh
+	echo ${CURR_PATH}
+	echo ${CURR_PATH}/libft-war-machine/my_config.sh
+	echo ${CURR_PATH}/libft-war-machine/my_config.sh
+	. ${CURR_PATH}/libft-war-machine/my_config.sh
+	cat ${CURR_PATH}/libft-war-machine/my_config.sh
 fi
 
 press_any_key(){
-	printf "${LGREEN}Press any key to continue${NC}";
-	read -rsn1; echo
+    printf "${LGREEN}Press any key to continue${NC}"
+    read -rsn1; echo
 }
 
 end_test(){
@@ -74,8 +84,9 @@ valid_params(){
 				end_test
 				;;
 			'2')
-				libft_unit_test
-				end_test
+				# libft_unit_test
+				# end_test
+				echo "libft_unit_test disabled. Choose another tester :c"
 				;;
 			'3')
 				libfttest
@@ -109,8 +120,8 @@ valid_params(){
 	else
 		warmachine
 		press_any_key
-		libft_unit_test
-		press_any_key
+		# libft_unit_test
+		# press_any_key
 		libfttest
 		press_any_key
 		libfttester
@@ -170,7 +181,10 @@ download_repos(){
 clear
 if [ $1 ] && ([ $1 == "clear" ] || [ $1 == "list" ]); then
 	valid_params $1
+else
+	download_repos
+	valid_params $1
+	if [ $1 ] && [ ! $1 == "2" ]; then
+		end_test
+	fi
 fi
-download_repos
-valid_params $1
-end_test
